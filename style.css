@@ -1,0 +1,53 @@
+body
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#navbar
+{
+    background-color:black;
+    width: 100%;         /*Makes the navbar full width across the page.*/
+    top: 0;         /*Places it at the very top of the screen.*/
+    height: 40px;
+    justify-content: center;
+    gap: 50px;          /*Adds space between the links.*/
+   
+    display: flex;       /*  Arranges the links in a row (horizontally).*/
+
+   justify-content: center;   
+   
+    position: fixed;
+    padding: 20px 0;        /*Adds space above and below the navbar.*/
+    overflow: hidden;
+    transition: color 0.3s,transform 0.3s; 
+
+   /* Makes the background color change smooth when scrolling.*/
+
+}
+#navbar a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+    transition: color 0.3s,transform 0.3s; 
+    
+    /* Smoothly changes the text color	Over 0.3s	*/
+     
+
+}
+#navbar.scrolled
+{
+    background-color: pink;
+   /* Changes navbar background to dark gray when you scroll down.*/
+}
+#navbar a:hover
+{
+     color: #ffcc00;
+    /*transform: scale(1.1);*/
+    
+}
+div{
+    height: 1500px;
+    padding-top: 100px;
+}
