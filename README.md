@@ -25,3 +25,10 @@ When the user scrolls down more than 50px, a .scrolled class is added to the nav
 This class changes the background color from black to pink using a smooth transition.
 
 The navbar links also have a hover color effect (#ffcc00).
+
+
+Output
+
+![Image](https://github.com/user-attachments/assets/6ab4d286-ecb0-4c15-9866-c847699b43ca)
+
+![Image](https://github.com/user-attachments/assets/bbd3bedc-4376-4b49-8c8f-8c9242ee24b7)
