@@ -9,25 +9,38 @@
 
 This is a simple responsive Landing Page built using HTML, CSS, and JavaScript. The navbar stays fixed at the top of the page and changes its background color when the user scrolls down more than 50 pixels, creating a dynamic user experience.
 
-*Features
-1. Sticky navigation bar using position: fixed
+🌸 FlowerFusion — Responsive Flower Shop Website
+FlowerFusion is a fully responsive and elegant flower shop website built using HTML, CSS, and JavaScript. This project was created as part of my internship to demonstrate frontend development skills, including interactivity using localStorage, dynamic UI updates, and responsive layouts.
 
-2. Smooth background color transition on scroll
+# Features
+1. Home, About, Products, Reviews, Contact sections
 
-3.  Hover effects on navigation links
+2. Like (heart) and 🛒 Add to Cart buttons with live counters
 
- 4. Responsive design with Flexbox
+3. Cart and liked items stored using localStorage
 
-* How It Works
-  
-When the user scrolls down more than 50px, a .scrolled class is added to the navbar.
+4. Contact form with message storage (locally)
 
-This class changes the background color from black to pink using a smooth transition.
+5. Smooth animations and hover effects
 
-The navbar links also have a hover color effect (#ffcc00).
+6. Fully responsive for mobile, tablet, and desktop
+
+7. Clean and modern UI using custom CSS
+
+8. Pop-up alerts for feedback on interactions
+
+# Tech Stack
+1. HTML5
+
+2. CSS3
+
+3. Vanilla JavaScript
+
+4. LocalStorage API
 
 
 Output
+
 
 
 
