@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Likes & Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 2rem;
+      color: var(--pink);
+    }
+    .container {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 5%;
+      flex-wrap: wrap;
+    }
+    .item-box {
+      flex: 1 1 25rem;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+    .item-box h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .item-box p {
+      font-size: 1.5rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<h1 class="section-title">🛒 Items in Cart</h1>
+<div style="text-align: center; margin-bottom: 1rem;">
+  <button onclick="clearCart()" class="btn">Clear Cart</button>
+</div>
+<div class="container" id="cart-section"></div>
+
+<h1 class="section-title">❤️ Liked Items</h1>
+<div style="text-align: center; margin-bottom: 1rem;">
+  <button onclick="clearLikes()" class="btn">Clear Likes</button>
+</div>
+<div class="container" id="like-section"></div>
+
+ 
+
+  
+    <script>
+  // Get cart and liked data from localStorage
+  let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  let likedItems = JSON.parse(localStorage.getItem("likes")) || [];
+
+  // Target containers
+  const cartContainer = document.getElementById("cart-section");
+  const likeContainer = document.getElementById("like-section");
+
+  // Function to show cart items
+  function renderCart() {
+    cartContainer.innerHTML = "";
+    if (cartItems.length === 0) {
+      cartContainer.innerHTML = "<p>No items in cart.</p>";
+    } else {
+      cartItems.forEach((item) => {
+        const box = document.createElement("div");
+        box.className = "item-box";
+        box.innerHTML = `<h3>${item.name}</h3><p>Price: ${item.price}</p>`;
+        cartContainer.appendChild(box);
+      });
+    }
+  }
+
+  // Function to show liked items
+  function renderLikes() {
+    likeContainer.innerHTML = "";
+    if (likedItems.length === 0) {
+      likeContainer.innerHTML = "<p>No items liked.</p>";
+    } else {
+      likedItems.forEach((item) => {
+        const box = document.createElement("div");
+        box.className = "item-box";
+        box.innerHTML = `<h3>${item.name}</h3>`;
+        likeContainer.appendChild(box);
+      });
+    }
+  }
+
+  // Clear all cart items
+  function clearCart() {
+    if (confirm("Are you sure you want to clear the cart?")) {
+      localStorage.removeItem("cart");
+      cartItems = [];
+      renderCart();
+    }
+  }
+
+  // Clear all liked items
+  function clearLikes() {
+    if (confirm("Are you sure you want to clear liked items?")) {
+      localStorage.removeItem("likes");
+      likedItems = [];
+      renderLikes();
+    }
+  }
+
+  // Initial rendering
+  renderCart();
+  renderLikes();
+</script>
+
+ 
+
+</body>
+</html>
+
